@@ -20,7 +20,6 @@ router.post(
   "/add-product",
   [
     body("title").isString().isLength({ min: 3 }).trim(), // If .isAlphanumeric() crashes, just use .isString or check the express-validator docs for update
-    body("imageUrl").isURL(),
     body("price").isFloat(),
     body("description").isLength({ min: 5, max: 400 }).trim(),
   ],
