@@ -14,8 +14,7 @@ const multer = require("multer");
 const errorController = require("./controllers/error");
 const User = require("./models/user");
 
-const MONGODB_URI =
-  "mongodb+srv://abedo:Abedo2022@cluster0.5t4ke.mongodb.net/shop-test-mongoose?retryWrites=true&w=majority";
+const MONGODB_URI = process.env.MONGODB_URI;
 
 const mongodbOptions = {
   useNewUrlParser: true,
