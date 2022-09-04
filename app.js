@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const https = require("https");
 require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
@@ -31,6 +32,9 @@ const store = new MongoDBStore({
   uri: MONGODB_URI,
   collection: "sessions",
 });
+
+const privateKey = fs.readFileSync('server.key')
+const certificate = fs.readFileSync('server.cert')
 
 const csrfProtection = csrf();
 app.use(flash());
@@ -125,6 +129,8 @@ app.use((error, req, res, next) => {
 mongoose
   .connect(MONGODB_URI, mongodbOptions)
   .then((result) => {
+    // https.createServer({key: privateKey, cert: certificate}, app).listen(process.env.PORT || 3000);
+
     app.listen(process.env.PORT || 3000);
   })
   .catch((err) => console.log(err));
