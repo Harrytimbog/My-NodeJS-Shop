@@ -1,0 +1,7 @@
+{
+  "env": {
+    "MONGO_URI": "BLABLALALALALA",
+    "STRIPE_SECRET_KEY": "sk_test_sdgsCccESTUHRgkM1wPTlPRX00TJ1l3vZe"
+
+  }
+}
