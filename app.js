@@ -74,7 +74,14 @@ const accessLogStream = fs.createWriteStream(
 );
 
 app.use(cors());
-// app.use(helmet());
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      "img-src": ["'self'", "https: data:"],
+    },
+  })
+);
 app.use(compression());
 app.use(morgan("combined", { stream: accessLogStream }));
 app.use(bodyParser.urlencoded({ extended: false }));
