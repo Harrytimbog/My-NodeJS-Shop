@@ -1,4 +1,4 @@
-# NodeJS-fileupload-n-download
+# My-NodeJS-Shop
 File attachement in NodeJS. Entails attaching of product image and also downloading of attachment like the orders pdf file which is generated on the fly in this application I built with NodeJS with ERB views
 
 ## Documentation    
@@ -12,13 +12,13 @@ File attachement in NodeJS. Entails attaching of product image and also download
 Clone the project
 
 ``` console
-git clone git@github.com:Harrytimbog/NodeJS-fileupload-n-download.git
+git clone git@github.com:Harrytimbog/My-NodeJS-Shop.git
 ```
 
 Go to the project directory
 
 ``` console
-cd NodeJS-fileupload-n-download.git
+cd My-NodeJS-Shop
 ```
 
 Install dependencies
@@ -56,6 +56,6 @@ STRIPE_SECRET_KEY
 
 Arigbede Timilehin Emmanuel - @Harrytimbog - harriemannie@gmail.com
 
-Project Link: git@github.com:Harrytimbog/NodeJS-fileupload-n-download.git
+Project Link: git@github.com:Harrytimbog/My-NodeJS-Shop.git
 
 Demo Link: https://node-wolf-shop.herokuapp.com/
